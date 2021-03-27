@@ -9,13 +9,17 @@
   "license": "MIT",
   "keywords": [],
   "scripts": {
-    "build:main": "tsc -p tsconfig.json",
-    "test": "jest"
+    "build": "tsc",
+    "test": "jest",
+    "start": "npm run build && node ./build/main/main.js"
   },
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^8.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "@babel/preset-env": "^7.13.12",

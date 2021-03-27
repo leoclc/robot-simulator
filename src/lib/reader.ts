@@ -10,6 +10,9 @@ export function getFileLines(filePath: string): string[] {
 }
 
 export function extractInitialCoordinates(firstLine: string): InitialCoordinates {
+  if (!firstLine) {
+    throw new Error('Line to extract coordinates cannot be empty')
+  }
   if (!firstLine.includes('PLACE')) {
     throw new Error('Initial commands must come from a PLACE command')
   }
