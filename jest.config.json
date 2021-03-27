@@ -1,0 +1,21 @@
+{
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": ["./jest.setup.ts"],
+    "testRegex": "/.*.test.ts$",
+    "rootDir": ".",
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/src/$1"
+    },
+    "testTimeout": 15000,
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": ["/node_modules/"],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/migrations/**",
+      "!**/node_modules/**",
+      "!**/@types/**",
+      "!**/__tests__/**",
+      "!**/__mocks__/**"
+    ]
+  }
+  
